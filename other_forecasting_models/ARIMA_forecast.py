@@ -12,7 +12,7 @@ df = yf.download(ticker, start='2024-01-01')
 # Create a series of the 'Close' column
 ts = df['Adj Close']
 
-# Create the ARIMA model (5 order lag, 1st differencing, no moving average term)
+# Create the ARIMA model (20 order lag, 1st differencing, no moving average term)
 model = ARIMA(ts, order=(20, 1, 0))
 model_fit = model.fit()
 
